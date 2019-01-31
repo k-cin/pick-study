@@ -7,3 +7,4 @@ false || 99  # => 99
 'cat' || 99  # => 'cat'
 
 name ||= 'default value'
+

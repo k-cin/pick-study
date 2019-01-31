@@ -19,8 +19,8 @@ end
 
 parse('songdata').each { |song| puts song }
 
-'John Apple'.scan /\w+/    # => ["John", "Apple"]
-'John Apple'.split(/ohn/)  # => ["J", " Apple"]
+'John Apple'.scan(/^joh/i) # => ["Joh"]
+'John Apple'.split(/ohn/) # => ["J", " Apple"]
 'cruel world'.scan(/\w+/) # => ["cruel", "world"]
 'cruel world'.split('uel') # => ["cr", " world"]
 

@@ -1,8 +1,6 @@
 class Frequency
-  def self.frequency(raw_text)
-    frequency = Hash.new(0)
-    split(raw_text).each { |word| frequency[word] += 1 }
-    frequency
+  def self.frequency(text)
+    split(text).each_with_object(Hash.new(0)) { |word, h| h[word] += 1; h }
   end
 
   private
