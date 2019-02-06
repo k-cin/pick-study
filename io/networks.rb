@@ -5,7 +5,7 @@ open('https://pragprog.com') do |x|
   puts x.read.scan(/<img alt=".*?" src=".*?"/m).uniq[0, 3]
 end
 
-page = open('https://infowars.com').read
+page = open('https://pcgamer.com').read
 if page =~ %r{<title>(.*?)</title>}
   puts "Title is #{Regexp.last_match(1).inspect}"
 end
