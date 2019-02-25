@@ -1,13 +1,13 @@
 f = File.open('podcasts.html')
 
 begin
-    while line = f.gets
-        puts line
-    end
+  while line = f.gets
+    puts line
+  end
 rescue Exception => boom
-    puts "It's a boom"
+  puts "It's a boom!: #{boom}"
 else
-    puts "zero errors to report"
+  puts 'zero errors to report'
 ensure
-    f.close
+  f.close
 end
